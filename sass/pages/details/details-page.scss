@@ -1,0 +1,71 @@
+/** Make item details smaller. */
+.itemDetailsGroup {
+  font-size: 0.8em;
+}
+
+/** Set background of video indicator to purple. */
+.videoIndicator {
+  background: #aa5cc3;
+}
+
+/** Set icon to look like stack for book folders. */
+.material-icons.indicatorIcon.folder::before {
+  content: "\e53b";
+}
+
+/** Clear background from detailPageSecondaryContainer. */
+.noBackdropTransparency .detailPageSecondaryContainer {
+  background: none;
+}
+
+/** Make detail ribbon background translucent. */
+.detailRibbon {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.trackSelections .selectContainer .detailTrackSelect {
+  padding-left: 0.5em;
+}
+
+/** Make external links smaller. */
+.itemExternalLinks {
+  font-size: 0.6em !important;
+  font-style: italic;
+}
+
+/** Set border radius and margin on container for track/episode list. */
+.childrenItemsContainer {
+  border-radius: 15px;
+  margin-top: 1em;
+}
+
+/** Even out padding on track/episode lists. */
+#childrenContent .listItem {
+  padding: 0.5em 0.25em 0.5em 1em !important;
+}
+
+/** Fix alignment of images in episode list. */
+.listItem-content {
+  align-items: top;
+}
+
+/** Fix border on track/episode lists. */
+.childrenItemsContainer > .listItem {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+
+/** Set border radius on first item in track/episode list. */
+.childrenItemsContainer > .listItem:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/** Set border radius and border on last item in track/episode list. */
+.childrenItemsContainer > .listItem:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+}

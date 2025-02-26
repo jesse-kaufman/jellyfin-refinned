@@ -1,0 +1,21 @@
+.homeSectionsContainer > .verticalSection:first-child .cardText {
+  display: none !important;
+}
+.homeSectionsContainer > .verticalSection:first-child .cardScalable,
+.homeSectionsContainer > .verticalSection:first-child .cardOverlayContainer,
+.homeSectionsContainer > .verticalSection:first-child .cardImageContainer {
+  border-radius: 0 !important;
+}
+
+.homeSectionsContainer > .verticalSection:first-child .cardBox {
+  margin-right: 0.5px;
+  margin-left: 0px;
+}
+.homeSectionsContainer > .verticalSection:first-child .emby-scroller {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.homeSectionsContainer > .verticalSection:first-child h2.sectionTitle {
+  display: none;
+}
