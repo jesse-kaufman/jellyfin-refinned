@@ -28,13 +28,13 @@ Some modifications to the default Jellyfin theme to make it feel more refined an
 
 ### Home View
 
-![alt text](https://github.com/jesse-kaufman/jellyfin-refinned/blob/main/images/screenshot1.jpg?raw=true)
+![alt text](https://github.com/jesse-kaufman/jellyfin-refinned/blob/main/images/screenshots/screenshot1.jpg?raw=true)
 
 ### Season Episodes View
 
-![alt text](https://github.com/jesse-kaufman/jellyfin-refinned/blob/main/images/screenshot2.jpg?raw=true)
+![alt text](https://github.com/jesse-kaufman/jellyfin-refinned/blob/main/images/screenshots/screenshot2.jpg?raw=true)
 
 ### Album View
 
-![alt text](https://github.com/jesse-kaufman/jellyfin-refinned/blob/main/images/screenshot3.jpg?raw=true)
+![alt text](https://github.com/jesse-kaufman/jellyfin-refinned/blob/main/images/screenshots/screenshot3.jpg?raw=true)
 
