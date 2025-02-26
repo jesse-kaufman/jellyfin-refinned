@@ -14,6 +14,7 @@ Some modifications to the default Jellyfin theme to make it feel more refined an
 - Translucent backgrounds throughout
 - Dark, slightly blurred backgrounds to increase legibility
 - No weird background glitches when scrolling quickly
+- Includes images for media library items
 
 **Home view features/improvements:**
 
