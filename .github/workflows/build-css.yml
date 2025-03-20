@@ -35,6 +35,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist/*.css
+          git add dist/*
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-build: compiled SCSS to CSS"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
