@@ -1,16 +1,17 @@
 /** Make submit button purple. */
 .button-submit {
-  background: var(--highlight-color) !important;
+  background: var(--accent-color) !important;
 }
+.paper-icon-button-light {
+  /** Set hover colors on icon buttons. */
+  &:hover:not(:disabled) {
+    background-color: var(--button-hover-background-color);
+    color: var(--button-hover-color);
+  }
 
-/** Set hover colors on icon buttons. */
-.paper-icon-button-light:hover:not(:disabled) {
-  background-color: #aa5cc310;
-  color: #aa5cc3f0;
-}
-
-/** Set active colors on icon buttons. */
-.paper-icon-button-light:active:not(:disabled) {
-  background-color: #aa5cc320;
-  color: #aa5cc390;
+  /** Set active colors on icon buttons. */
+  &:active:not(:disabled) {
+    background-color: var(--button-active-background-color);
+    color: var(--button-active-color);
+  }
 }
