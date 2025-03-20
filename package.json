@@ -1,0 +1,24 @@
+{
+  "name": "refinned",
+  "version": "1.0.0",
+  "description": "Refined version of the default Jellyfin theme",
+  "scripts": {
+    "build": "sass src/main.scss dist/refinned.css && postcss dist/refinned.css --use cssnano --output dist/refinned.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesse-kaufman/jellyfin-refinned.git"
+  },
+  "author": "Jesse Kaufman <jesse@jessekaufman.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesse-kaufman/jellyfin-refinned/issues"
+  },
+  "homepage": "https://github.com/jesse-kaufman/jellyfin-refinned#readme",
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.86.0"
+  }
+}
