@@ -1,5 +1,6 @@
+/** Set default highlight color. */
 html {
-  --highlight-color: #aa5cc3;
+  --highlight-color: #775299;
 }
 
 /** Reduce card widths on high-res screens. */
