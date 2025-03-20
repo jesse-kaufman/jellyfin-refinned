@@ -1,0 +1,14 @@
+/** Set default highlight color. */
+$accent-color: #775299;
+$button-hover-color: rgba($accent-color, 0.95);
+$button-hover-background-color: rgba($accent-color, 0.06);
+$button-active-color: rgba($accent-color, 0.56);
+$button-active-background-color: rgba($accent-color, 0.13);
+
+:root {
+  --accent-color: #{$accent-color};
+  --button-hover-color: #{$button-hover-color};
+  --button-hover-background-color: #{$button-hover-background-color};
+  --button-active-color: #{$button-active-color};
+  --button-active-background-color: #{$button-active-background-color};
+}
