@@ -16,20 +16,25 @@ jobs:
       # Setup build environment
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: "npm"
+
       - name: Install dependencies
         run: npm ci
 
+      # Remove dist from git tracking if it exists
       - name: Remove dist from git tracking (if it exists)
         run: |
-          git rm -r --cached dist
-          echo "dist/" >> .gitignore
-          git add .gitignore
-          git commit -m "Remove dist directory from version control"
+          if [ -d "dist" ]; then
+            git rm -r --cached dist
+            echo "dist/" >> .gitignore
+            git add .gitignore
+            git commit -m "Remove dist directory from version control"
+          fi
 
       # Build the CSS
       - name: Compile SCSS
