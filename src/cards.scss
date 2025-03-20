@@ -1,10 +1,12 @@
-/** Reduce card widths on high-res screens. */
+// Reduce card widths on high-res screens.
 @media (min-width: 50em) {
   .overflowPortraitCard,
   .overflowSquareCard {
     width: 16.5vw !important;
   }
 }
+
+// Reduce card widths on high-res screens.
 @media (min-width: 75em) {
   .overflowPortraitCard,
   .overflowSquareCard {
@@ -12,14 +14,14 @@
   }
 }
 
-/** Set card style. */
+// Set card style.
 .cardScalable {
   border-radius: 15px;
   overflow: hidden;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
-/** Make secondary text slightly darker. */
+// Make secondary text slightly darker.
 .cardText-secondary {
   opacity: 0.5;
 }
