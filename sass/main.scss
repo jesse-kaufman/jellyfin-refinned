@@ -12,19 +12,23 @@ html {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/** Reduce whitespace at top of page. */
 .libraryPage:not(.noSecondaryNavPage) {
   padding-top: 6.5em !important;
 }
 
+/** Reduce whitespace in header. */
 .withSectionTabs .headerTop {
   padding-bottom: 0;
 }
 
+/** Reduce whitespace in header buttons. */
 .emby-tab-button {
   padding-top: 0.75em;
   padding-bottom: 0.75em;
 }
 
+/** Make header dark with blurred background effect. */
 .skinHeader-withBackground {
   background-color: #101010d0;
   backdrop-filter: blur(15px);
