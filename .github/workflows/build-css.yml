@@ -8,6 +8,7 @@ on:
   pull_request:
 
 jobs:
+  # Build CSS from SCSS
   build:
     runs-on: ubuntu-latest
 
