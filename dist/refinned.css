@@ -1,9 +1,12 @@
 /** Set default highlight color. */
-html {
-  --highlight-color: #775299;
+:root {
+  --accent-color: #775299;
+  --button-hover-color: rgba(119, 82, 153, 0.95);
+  --button-hover-background-color: rgba(119, 82, 153, 0.06);
+  --button-active-color: rgba(119, 82, 153, 0.56);
+  --button-active-background-color: rgba(119, 82, 153, 0.13);
 }
 
-/** Reduce card widths on high-res screens. */
 @media (min-width: 50em) {
   .overflowPortraitCard,
   .overflowSquareCard {
@@ -16,33 +19,32 @@ html {
     width: 13.5vw !important;
   }
 }
-/** Set card style. */
 .cardScalable {
   border-radius: 15px;
   overflow: hidden;
   border: 0.5px solid rgba(255, 255, 255, 0.1);
 }
 
-/** Make secondary text slightly darker. */
 .cardText-secondary {
   opacity: 0.5;
 }
 
 /** Make submit button purple. */
 .button-submit {
-  background: var(--highlight-color) !important;
+  background: var(--accent-color) !important;
 }
 
-/** Set hover colors on icon buttons. */
+.paper-icon-button-light {
+  /** Set hover colors on icon buttons. */
+  /** Set active colors on icon buttons. */
+}
 .paper-icon-button-light:hover:not(:disabled) {
-  background-color: rgba(170, 92, 195, 0.062745098);
-  color: rgba(170, 92, 195, 0.9411764706);
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-color);
 }
-
-/** Set active colors on icon buttons. */
 .paper-icon-button-light:active:not(:disabled) {
-  background-color: rgba(170, 92, 195, 0.1254901961);
-  color: rgba(170, 92, 195, 0.5647058824);
+  background-color: var(--button-active-background-color);
+  color: var(--button-active-color);
 }
 
 /** Makes web player scrubber easier to use */
@@ -57,7 +59,7 @@ html {
 
 /** Set background of video indicator to purple. */
 .videoIndicator {
-  background: #aa5cc3;
+  background: var(--accent-color);
 }
 
 /** Set icon to look like stack for book folders. */
@@ -224,12 +226,12 @@ html {
 }
 
 .selectionCommandsPanel {
-  background: #aa5cc3;
+  background: var(--accent-color);
   color: #fff;
 }
 
 .itemSelectionPanel {
-  border: 1px solid #aa5cc3;
+  border: 1px solid var(--accent-color);
   border-radius: 15px;
 }
 
@@ -241,7 +243,7 @@ html {
 
 .emby-checkbox:checked + span + .checkboxOutline,
 .itemProgressBarForeground {
-  background-color: #aa5cc3;
+  background-color: var(--accent-color);
 }
 
 .emby-input,
