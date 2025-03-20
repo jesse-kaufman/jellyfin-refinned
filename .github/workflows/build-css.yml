@@ -1,0 +1,41 @@
+name: Build SCSS
+
+# On pushing to main, build CSS
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Setup build environment
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+      - name: Install Dependencies
+        run: npm ci
+      - name: Compile SCSS
+        run: npm run build:css
+
+      # Upload build files
+      - name: Upload CSS Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-css
+          path: dist/*
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/*.css
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-build: compiled SCSS to CSS"
+          git push
