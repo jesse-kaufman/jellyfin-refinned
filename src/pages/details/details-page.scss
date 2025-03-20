@@ -5,7 +5,7 @@
 
 /** Set background of video indicator to purple. */
 .videoIndicator {
-  background: #aa5cc3;
+  background: var(--accent-color);
 }
 
 /** Set icon to look like stack for book folders. */

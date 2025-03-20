@@ -78,12 +78,12 @@ html {
 }
 
 .selectionCommandsPanel {
-  background: #aa5cc3;
+  background: var(--accent-color);
   color: #fff;
 }
 
 .itemSelectionPanel {
-  border: 1px solid #aa5cc3;
+  border: 1px solid var(--accent-color);
   border-radius: 15px;
 }
 
@@ -94,7 +94,7 @@ html {
 }
 .emby-checkbox:checked + span + .checkboxOutline,
 .itemProgressBarForeground {
-  background-color: #aa5cc3;
+  background-color: var(--accent-color);
 }
 
 .emby-input,
