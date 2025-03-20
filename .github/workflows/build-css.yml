@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Compile SCSS
-        run: npm run build:css
+        run: npm run build
 
       # Upload build files
       - name: Upload CSS Artifact
