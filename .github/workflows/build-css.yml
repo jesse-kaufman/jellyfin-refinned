@@ -30,13 +30,12 @@ jobs:
       - name: Compile SCSS
         run: npm run build
 
-      # Check if dist files are changed and push them (if needed)
-      - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changes (if any)
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add dist/*
-          git commit -m "Auto-build: compiled SCSS to CSS"
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+          git add .
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Your commit message"
+            git push origin main
+          else
+            echo "No changes to commit."
+          fi
