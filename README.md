@@ -1,12 +1,16 @@
 # Jellyfin Refinned
 
-*Updated version of the default Jellyfin skin containing to make it feel more refined and emphasize the purple color over the blue (my personal preference).
+Updated version of the default Jellyfin skin containing to make it feel more refined and emphasize the purple color over the blue (my personal preference).
 
 ## Installation
 
 To use this theme, you'll need to clone this repository and host it somewhere that's accessible via HTTPS. Then, place the following in the "Custom CSS code" text box on the General tab in the administrative dashboard. Replace the domain name and path so the URL correctly reflects the path to your copy of the refinned.min.css file.
 
 `@import url('https://cdn.example.com/path/to/jellyfin-refinned/dist/refinned.min.css')`
+
+### Libary images
+
+To use the library images, upload images via the Jellyfin web UI the same way a video poster is changed.
 
 ## Features/improvements
 
