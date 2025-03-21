@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Refined version of the default Jellyfin theme",
   "scripts": {
-    "build": "sass src/main.scss dist/refinned.css && postcss dist/refinned.css --use cssnano --output dist/refinned.min.css"
+    "build": "sass src/main.scss dist/refinned.css && postcss dist/refinned.css --use cssnano --output dist/refinned.min.css",
+    "build:dev": "sass src/main.scss dev/refinned.css && postcss dev/refinned.css --use cssnano --output dev/refinned.min.css"
   },
   "repository": {
     "type": "git",
