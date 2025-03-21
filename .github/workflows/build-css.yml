@@ -1,6 +1,5 @@
 name: Build SCSS
 
-# On pushing to main, build CSS
 on:
   push:
     branches:
@@ -8,45 +7,38 @@ on:
   pull_request:
 
 jobs:
-  # Build CSS from SCSS
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Setup build environment
+      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: "npm"
 
+      # Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # Remove dist from git tracking if it exists
-      - name: Remove dist from git tracking (if it exists)
-        run: |
-          if [ -d "dist" ]; then
-            git rm -r --cached dist
-            echo "dist/" >> .gitignore
-            git add .gitignore
-            git commit -m "Remove dist directory from version control"
-          fi
-
-      # Build the CSS
+      # Compile SCSS
       - name: Compile SCSS
         run: npm run build
 
-      # Commit generated and minified CSS back to repo
-      - name: Commit and push changes
+      # Check if dist files are changed and push them (if needed)
+      - name: Commit and push changes if needed
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f dist/*
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-build: compiled SCSS to CSS"
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+          git diff --quiet || (
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add dist/*
+            git commit -m "Auto-build: compiled SCSS to CSS"
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+          )
