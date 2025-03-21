@@ -1,0 +1,256 @@
+/** Set default highlight color. */
+:root {
+  --accent-color: #775299;
+  --button-hover-color: rgba(119, 82, 153, 0.95);
+  --button-hover-background-color: rgba(119, 82, 153, 0.06);
+  --button-active-color: rgba(119, 82, 153, 0.56);
+  --button-active-background-color: rgba(119, 82, 153, 0.13);
+}
+
+@media (min-width: 50em) {
+  .overflowPortraitCard,
+  .overflowSquareCard {
+    width: 16.5vw !important;
+  }
+}
+@media (min-width: 75em) {
+  .overflowPortraitCard,
+  .overflowSquareCard {
+    width: 13.5vw !important;
+  }
+}
+.cardScalable {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardText-secondary {
+  opacity: 0.5;
+}
+
+/** Make submit button purple. */
+.button-submit {
+  background: var(--accent-color) !important;
+}
+
+.paper-icon-button-light {
+  /** Set hover colors on icon buttons. */
+  /** Set active colors on icon buttons. */
+}
+.paper-icon-button-light:hover:not(:disabled) {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-color);
+}
+.paper-icon-button-light:active:not(:disabled) {
+  background-color: var(--button-active-background-color);
+  color: var(--button-active-color);
+}
+
+/** Makes web player scrubber easier to use */
+.mdl-slider {
+  height: 300%;
+}
+
+/** Make item details smaller. */
+.itemDetailsGroup {
+  font-size: 0.8em;
+}
+
+/** Set background of video indicator to purple. */
+.videoIndicator {
+  background: var(--accent-color);
+}
+
+/** Set icon to look like stack for book folders. */
+.material-icons.indicatorIcon.folder::before {
+  content: "\e53b";
+}
+
+/** Clear background from detailPageSecondaryContainer. */
+.noBackdropTransparency .detailPageSecondaryContainer {
+  background: none;
+}
+
+/** Make detail ribbon background translucent. */
+.detailRibbon {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.trackSelections .selectContainer .detailTrackSelect {
+  padding-left: 0.5em;
+}
+
+/** Make external links smaller. */
+.itemExternalLinks {
+  font-size: 0.6em !important;
+  font-style: italic;
+}
+
+/** Set border radius and margin on container for track/episode list. */
+.childrenItemsContainer {
+  border-radius: 15px;
+  margin-top: 1em;
+}
+
+/** Even out padding on track/episode lists. */
+#childrenContent .listItem {
+  padding: 0.5em 0.25em 0.5em 1em !important;
+}
+
+/** Fix alignment of images in episode list. */
+.listItem-content {
+  align-items: top;
+}
+
+/** Fix border on track/episode lists. */
+.childrenItemsContainer > .listItem {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-right: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+
+/** Set border radius on first item in track/episode list. */
+.childrenItemsContainer > .listItem:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/** Set border radius and border on last item in track/episode list. */
+.childrenItemsContainer > .listItem:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+#castContent .cardPadder-overflowPortrait {
+  padding-bottom: 100%;
+}
+
+.homeSectionsContainer > .verticalSection:first-child .cardText {
+  display: none !important;
+}
+
+.homeSectionsContainer > .verticalSection:first-child .cardScalable,
+.homeSectionsContainer > .verticalSection:first-child .cardOverlayContainer,
+.homeSectionsContainer > .verticalSection:first-child .cardImageContainer {
+  border-radius: 0 !important;
+}
+
+.homeSectionsContainer > .verticalSection:first-child .cardBox {
+  margin-right: 0.5px;
+  margin-left: 0px;
+}
+
+.homeSectionsContainer > .verticalSection:first-child .emby-scroller {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.homeSectionsContainer > .verticalSection:first-child h2.sectionTitle {
+  display: none;
+}
+
+.skinHeader,
+html {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/** Reduce whitespace at top of page. */
+.libraryPage:not(.noSecondaryNavPage) {
+  padding-top: 6.5em !important;
+}
+
+/** Reduce whitespace in header. */
+.withSectionTabs .headerTop {
+  padding-bottom: 0;
+}
+
+/** Reduce whitespace in header buttons. */
+.emby-tab-button {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+
+/** Make header dark with blurred background effect. */
+.skinHeader-withBackground {
+  background-color: rgba(16, 16, 16, 0.8156862745);
+  backdrop-filter: blur(15px);
+}
+
+@media (min-width: 100em) {
+  .headerTabs {
+    margin-top: -2.3em !important;
+  }
+}
+.pageTabContent > .padded-top {
+  padding-top: 0;
+}
+
+.pageTabContent {
+  margin-top: -15px;
+}
+
+.collapseContent,
+.paperList,
+.visualCardBox {
+  background: none;
+}
+
+.fab,
+.trackSelections .selectContainer .detailTrackSelect,
+.defaultCardBackground4,
+.defaultCardBackground3,
+.defaultCardBackground2,
+.defaultCardBackground1,
+#childrenContent .listItem {
+  background-color: rgba(48, 48, 48, 0.3137254902) !important;
+  backdrop-filter: blur(5px);
+}
+
+.fab:hover,
+.raised:hover,
+#childrenContent .listItem:hover {
+  background: rgba(48, 48, 48, 0.5647058824);
+  backdrop-filter: blur(5px);
+}
+
+.backdropImage {
+  filter: blur(2px);
+}
+
+.dialog {
+  border-radius: 15px !important;
+}
+
+.selectionCommandsPanel {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.itemSelectionPanel {
+  border: 1px solid var(--accent-color);
+  border-radius: 15px;
+}
+
+.checkboxOutline,
+.multiSelectCheckboxOutline {
+  border-radius: 50% !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline,
+.itemProgressBarForeground {
+  background-color: var(--accent-color);
+}
+
+.emby-input,
+.emby-select,
+.emby-textarea,
+.emby-button {
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=refinned.css.map */
