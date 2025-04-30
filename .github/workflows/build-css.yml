@@ -32,6 +32,7 @@ jobs:
 
       - name: Commit changes (if any)
         run: |
+          git config --global user.email "jesse@jessekaufman.com"
           git add .
           if ! git diff-index --quiet HEAD; then
             git commit -m "Your commit message"
